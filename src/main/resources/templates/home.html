@@ -4,8 +4,13 @@
   <meta charset="UTF-8">
   <title>Home</title>
 </head>
-<body>
-  <h1>Welcome, <span th:text="${userSession.username}"></span>!</h1>
-  <a th:href="@{/logout}">Logout</a>
+<body >
+    <div action="/logout" method="get">
+          <h1>Welcome, <span th:text="${userSession}"></span>!</h1>
+          <a th:href="@{/logout}" action="/logout">
+              <button type="submit">Logout</button>
+          </a>
+    </div>
+
 </body>
 </html>

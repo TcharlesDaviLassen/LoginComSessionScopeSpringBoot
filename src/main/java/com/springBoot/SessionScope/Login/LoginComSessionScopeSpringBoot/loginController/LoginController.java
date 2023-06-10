@@ -24,6 +24,7 @@ public class LoginController {
         if (username.equals("admin") && password.equals("admin123")) {
             userSession.setUsername(username);
             userSession.setLoggedIn(true);
+
             return "redirect:/home";
         } else {
             return "login";
